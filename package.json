@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/cutterbl/SoundTouchJS",
   "scripts": {
+    "prepare": "rollup -c scripts/rollup.config.mjs",
     "build": "rollup -c scripts/rollup.config.mjs",
     "release": "commit-and-tag-version",
     "start": "node scripts/server.cjs"
@@ -65,5 +66,6 @@
     "rollup-plugin-clear": "2.0.7",
     "serve-static": "1.16.2",
     "soundtouchjs": "0.2.0"
-  }
+  },
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
 }

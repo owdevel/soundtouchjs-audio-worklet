@@ -27,11 +27,11 @@ class SoundTouchWorklet extends AudioWorkletProcessor {
 
     if (!leftOutput || !leftOutput.length) return false;
 
-    const rate = parameters.rate[0] ?? parameters.rate;
-    const tempo = parameters.tempo[0] ?? parameters.tempo;
-    const pitch = parameters.pitch[0] ?? parameters.pitch;
+    const rate = parameters.rate[0] ? parameters.rate[0] : parameters.rate;
+    const tempo = parameters.tempo[0] ? parameters.tempo[0] : parameters.tempo;
+    const pitch = parameters.pitch[0] ? parameters.pitch[0] : parameters.pitch;
     const pitchSemitones =
-      parameters.pitchSemitones[0] ?? parameters.pitchSemitones;
+      parameters.pitchSemitones[0] ? parameters.pitchSemitones[0] : parameters.pitchSemitones;
 
     this._pipe.rate = rate;
     this._pipe.tempo = tempo;
